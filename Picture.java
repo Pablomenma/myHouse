@@ -1,3 +1,5 @@
+                    package myHome;
+
 /**
  * This class represents a simple picture. You can draw the picture using
  * the draw method. But wait, there's more: being an electronic picture, it
@@ -5,14 +7,16 @@
  * colors (only after it's been drawn, of course).
  *
  * This class was written as an early example for teaching Java with BlueJ.
- * 
+*  
  * @author  Michael Kolling and David J. Barnes
+ * 
  * @version 2011.07.31
  */
 public class Picture
 {
     private Square wall;
     private Square window;
+    private Circle moon;
     private Triangle roof;
     private Circle sun;
 
@@ -54,6 +58,11 @@ public class Picture
         sun.moveVertical(-40);
         sun.changeSize(80);
         sun.makeVisible();
+        moon = new Circle();
+        moon.makeVisible();
+        moon.changeSize(20);
+        moon.moveHorizontal(-100);
+        moon.changeColor("magenta");
     }
 
     /**
