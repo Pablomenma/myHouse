@@ -99,5 +99,41 @@ public class Picture
             roof.changeColor("green");
             sun.changeColor("yellow");
         }
-    }
-}
+    } // se cierra el metodo setcolor
+    public void amanecer()
+    {
+        wall = new Square();
+        wall.moveHorizontal(-140);
+        wall.moveVertical(20);
+        wall.changeSize(120);
+        wall.makeVisible();
+        
+        window = new Square();
+        window.changeColor("black");
+        window.moveHorizontal(-120);
+        window.moveVertical(40);
+        window.changeSize(40);
+        window.makeVisible();
+
+        roof = new Triangle();  
+        roof.changeSize(60, 180);
+        roof.moveHorizontal(20);
+        roof.moveVertical(-60);
+        roof.makeVisible();
+
+        sun = new Circle();
+        sun.changeColor("yellow");
+        sun.moveHorizontal(100);
+        sun.moveVertical(-40);
+        sun.changeSize(80);
+        sun.makeVisible();
+        sun.slowMoveVertical(-200);
+        floor.moveHorizontal(140);
+        floor.moveVertical(90);
+        floor.changeColor("green");
+        floor.makeVisible();
+        
+        
+    } 
+
+} 
